@@ -22,10 +22,15 @@ LOG = logging.getLogger(__name__)
 
 def _iter_config(f):
     conf = []
-    for line in f:
+    for n, line in enumerate(f):
+        if line.startswith('#'):
+            continue
         line = line.rstrip()
+        if not line:
+            continue
         parts = line.split(sep=None, maxsplit=2)
         if len(parts) != 2:
+            LOG.warning('ignored invalid config `%s` (line %d)', line, n + 1)
             continue
         yield parts[0], parts[1]
 
