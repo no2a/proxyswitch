@@ -1,11 +1,14 @@
 [project]
 name = "proxyswitch"
-version = "0.1.0"
+version = "0.1.1"
 readme = "README.md"
 requires-python = ">= 3.8"
 dependencies = [
     "proxy-py>=2.4.4",
 ]
+
+[project.scripts]
+proxyswitch = 'proxyswitch:main'
 
 [build-system]
 requires = ["hatchling"]

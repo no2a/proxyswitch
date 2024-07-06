@@ -74,3 +74,8 @@ class Plugin(ProxyPoolPlugin):
             return super().before_upstream_connection(request)
         else:
             return request
+
+
+def main():
+    from proxy import entry_point
+    entry_point()

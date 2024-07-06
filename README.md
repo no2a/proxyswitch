@@ -46,10 +46,10 @@ pipx install git+https://github.com/no2a/proxyswitch.git
 設定ファイルは--proxyswitch-configで指定。起動するとlocalhost:8899でlisten状態になる。
 
 ```
-proxy --port 8899 --plugin proxyswitch.Plugin --proxyswitch-config ~/.proxyswitch.conf
+proxyswitch --port 8899 --plugin proxyswitch.Plugin --proxyswitch-config ~/.proxyswitch.conf
 ```
 
-なお、本プログラムはproxy.pyというプロキシサーバソフトのプラグインとして作られており、proxy.pyには他にも多数のオプションがあるが関係ないので説明はしない。
+なお、本プログラムは[proxy.py](https://github.com/abhinavsingh/proxy.py)というプロキシサーバソフトのプラグインとして作られており、`proxyswitch -h`などでproxy.pyがもつ多数のオプションが表示され実際に使えるものもあるが、ここでは説明しない。必要ならproxy.py本体のドキュメントなどを参照すること。
 
 ## 確認
 
